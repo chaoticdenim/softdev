@@ -1,0 +1,2 @@
+awk '{ match($0,/".*"/) head = substr($0,1,RSTART-1) tail = substr($0,RSTART+RLENGTH) gsub(/,/,"|",head) gsub(/,/,"|",tail) print head substr($0,RSTART,RLENGTH) tail
+}' movie_list.csv
