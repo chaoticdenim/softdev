@@ -1,0 +1,3 @@
+today=$((date +'%B'))
+gcc -c $today.c -o $today.o
+gcc strange_app.c $today.o -o strange_app
